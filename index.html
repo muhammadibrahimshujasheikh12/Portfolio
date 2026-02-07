@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ibrahim | Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#4f46e5',   /* Electric Indigo */
+                            secondary: '#4338ca',
+                            dark: '#050505',      /* Deep Onyx */
+                            surface: '#0a0a0a',   /* Slate 950 */
+                            border: '#1a1a1a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #a3a3a3;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .premium-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background-color: #050505;
+            background-image: 
+                radial-gradient(circle at 50% -20%, rgba(79, 70, 229, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(79, 70, 229, 0.03) 0%, transparent 40%);
+        }
+
+        .card-premium {
+            background: rgba(10, 10, 10, 0.4);
+            border: 1px solid #1a1a1a;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .card-premium:hover {
+            border-color: #313131;
+            background: rgba(10, 10, 10, 0.6);
+            transform: translateY(-4px);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4f46e5; }
+
+        /* Advanced Animations */
+        @keyframes tracking-in-expand {
+            0% { letter-spacing: -0.5em; opacity: 0; filter: blur(12px); transform: scale(1.2); }
+            100% { letter-spacing: 0.1em; opacity: 1; filter: blur(0); transform: scale(1); }
+        }
+
+        @keyframes line-grow-x {
+            0% { width: 0; opacity: 0; }
+            100% { width: 80px; opacity: 1; }
+        }
+
+        @keyframes slide-reveal-sub {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 0.4; transform: translateY(0); }
+        }
+
+        @keyframes fade-out-exit {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.1); filter: blur(10px); }
+        }
+
+        @keyframes float-ai {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
+        }
+
+        .animate-tracking-expand {
+            animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+        }
+
+        .animate-line-grow {
+            animation: line-grow-x 1s cubic-bezier(0.645, 0.045, 0.355, 1.000) 0.5s forwards;
+        }
+
+        .animate-slide-sub {
+            animation: slide-reveal-sub 1s ease-out 0.8s forwards;
+        }
+
+        .loader-exit {
+            animation: fade-out-exit 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+
+        .animate-float-ai {
+            animation: float-ai 5s ease-in-out infinite;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-premium {
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        .no-scroll { overflow: hidden; }
+
+        /* Hide Scrollbar */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "@emailjs/browser": "https://esm.sh/@emailjs/browser@^4.4.1",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="selection:bg-brand-primary selection:text-white">
+    <div class="premium-bg"></div>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
