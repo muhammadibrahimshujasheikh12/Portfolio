@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   // Path to CV file exactly as requested
-  const cvUrl = "cv/Muhammadibrahim.pdf"; 
+  const cvUrl = "/Muhammadibrahim.pdf"; 
 
   const roles = [
     "Full-Stack Developer",

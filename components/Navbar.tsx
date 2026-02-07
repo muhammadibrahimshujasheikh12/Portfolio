@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const cvUrl = "cv/Muhammadibrahim.pdf";
+  const cvUrl = "/Muhammadibrahim.pdf";
   const agencyUrl = "https://devvortex-co.netlify.app";
 
   useEffect(() => {
